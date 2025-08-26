@@ -3,20 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Languagenet – Sprachlern-App mit Lektionen, Vokabeltrainer und Grammatik." />
+  <meta property="og:title" content="Languagenet – Sprachlernen (Static)" />
+  <meta property="og:description" content="Kostenlose statische SPA zum Lernen von Sprachen." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Languagenet – Sprachlernen (Static)" />
+  <meta name="twitter:description" content="Kostenlose statische SPA zum Lernen von Sprachen." />
+  <link rel="manifest" href="manifest.json" />
   <title>Languagenet – Sprachlernen (Static)</title>
   <meta name="theme-color" content="#111827" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAB7ElEQVR4nO3SMQ3AIAAAQcBId3TgX1M99AfS5E7BDz+ffQZ8tW4H8G8GIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORGIjEQCQGIjEQiYFIDERiIBIDkRiIxEAkBiIxEImBSAxEYiASA5EYiMRAJAYiMRCJgUgMRGIgEgORvLpNAg0s3GTIAAAAAElFTkSuQmCC" />
+  <link rel="stylesheet" href="style.min.css" />
 </head>
 <body>
-  <div id="topbar" class="topbar">
-    <button class="tab-button" data-route="#/home" aria-label="Start">Start</button>
-    <button class="tab-button" data-route="#/lessons" aria-label="Lektionen">Lektionen</button>
-    <button class="tab-button" data-route="#/vocab" aria-label="Vokabeln">Vokabeln</button>
-    <button class="tab-button" data-route="#/grammar" aria-label="Grammatik">Grammatik</button>
-    <button class="tab-button" data-route="#/settings" aria-label="Einstellungen">Einstellungen</button>
-  </div>
+  <nav id="topbar" class="topbar">
+      <a class="tab-button" href="#/home" aria-label="Start">Start</a>
+      <a class="tab-button" href="#/lessons" aria-label="Lektionen">Lektionen</a>
+      <a class="tab-button" href="#/vocab" aria-label="Vokabeln">Vokabeln</a>
+      <a class="tab-button" href="#/grammar" aria-label="Grammatik">Grammatik</a>
+      <a class="tab-button" href="#/settings" aria-label="Einstellungen">Einstellungen</a>
+    </nav>
   <main id="app"></main>
   <noscript>Bitte aktiviere JavaScript – diese Seite benötigt JS.</noscript>
-  <script src="app.js"></script>
+  <script src="app.min.js" defer></script>
 </body>
 </html>
