@@ -5,6 +5,11 @@
   const els = (sel, parent=document)=>[...parent.querySelectorAll(sel)];
   const app = el('#app');
   const TOPBAR = el('#topbar');
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+  }
+
   const STATE_KEY = 'languagenet-state-v1';
 
   const initialState = {
@@ -51,7 +56,12 @@
   // Utilities
   const routeTo = (hash) => { location.hash = hash; };
   const setActiveTab = () => {
-    els('.tab-button').forEach(b => b.classList.toggle('active', b.dataset.route === location.hash));
+    els('.tab-button').forEach(link => {
+      const isActive = link.getAttribute('href') === location.hash;
+      link.classList.toggle('active', isActive);
+      if (isActive) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
   };
 
   const tpl = {
@@ -305,8 +315,9 @@
   // events
   window.addEventListener('hashchange', render);
   TOPBAR.addEventListener('click', (e)=>{
-    const btn = e.target.closest('.tab-button'); if(!btn) return;
-    routeTo(btn.dataset.route);
+    const link = e.target.closest('a'); if(!link) return;
+    e.preventDefault();
+    routeTo(link.getAttribute('href'));
   });
 
   // initial

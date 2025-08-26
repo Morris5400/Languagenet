@@ -1,0 +1,16 @@
+{
+  "name": "languagenet",
+  "version": "1.0.0",
+  "description": "Dies ist eine statische, framework-freie Demo-Oberfläche (HTML/CSS/JS), die auf GitHub Pages lauffähig ist. Sie ersetzt keine serverseitigen Next.js-Funktionen (Login, API-Routen, DB).",
+  "main": "app.js",
+  "scripts": {
+    "build": "esbuild app.js --bundle --minify --outfile=app.min.js && esbuild style.css --minify --outfile=style.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  }
+}

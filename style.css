@@ -29,7 +29,8 @@ body{
 .tab-button{
   appearance:none;border:1px solid var(--border);background:linear-gradient(180deg,#0f172a,#0b1220);
   color:var(--text);border-radius:12px;padding:.5rem .85rem;cursor:pointer;
-  transition:.2s transform, .2s border-color, .2s box-shadow
+  transition:.2s transform, .2s border-color, .2s box-shadow;
+  text-decoration:none;display:inline-block
 }
 .tab-button:hover{transform:translateY(-1px);border-color:#22406a;box-shadow:var(--shadow)}
 .tab-button.active{border-color:var(--brand)}
